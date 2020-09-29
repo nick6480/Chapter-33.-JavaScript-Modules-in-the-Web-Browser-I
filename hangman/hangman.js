@@ -1,4 +1,4 @@
-
+// Inproved
 
 let inputWord = document.getElementById("inputWord");
 let inputBtn = document.getElementById("inputBtn");
