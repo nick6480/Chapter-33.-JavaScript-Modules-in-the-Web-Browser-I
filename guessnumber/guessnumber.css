@@ -1,0 +1,53 @@
+
+#divTid {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#pScore {
+    font-size: 15px;
+}
+
+#inputnumber {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+#submitnumber {
+    padding: 10px;
+    font-size: 14px;
+    background-color: green;
+    border: none;
+    color: #fff;
+}
+
+#submitnumber:hover {
+    background-color: rgb(11, 54, 11);
+}
+
+#reset {
+    padding: 10px 20px 10px 20px;
+    font-size: 14px;
+    background-color: rgb(255, 221, 111);
+    border: none;
+    color: #000;
+}
+
+#reset:hover {
+    background-color: rgb(180, 151, 24);
+}
+
+#showresult {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#startCount:focus {
+    background-color: yellowgreen;
+}
+
+#endCount:focus {
+    background-color: tomato;
+}

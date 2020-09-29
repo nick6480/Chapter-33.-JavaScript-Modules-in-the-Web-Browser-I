@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+
+    <script src="hangmany/CookieLib.js"></script>
+    <script src="hangmany/execution1.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="wrapper2">
+        <h1>Hangman</h1>
+        <input id="inputWord" type="password" name="word" placeholder="Indtast ord">
+        <button id="inputBtn" type="button" name="button">Start</button>
+        <h3><span id="userInput"></h3>
+        <h3 id="display"></h3>
+        <h3 id="guesses"></h3>
+        <p id="showTime"></p>
+
+        <form name='formal' method='post'>
+    <p>
+        Name: <input type='text' name='name' action='hangman.html' required/>
+    </p>
+    <p>
+        Time: <input type='number' name='time' action='hangman.html' required/>
+    </p>
+    <p>
+        <input  type='submit' value='Go'/>
+    </p>
+      </form>
+      </div>
+    </div>
+  </body>
+      <script src="hangmany/hangman.js"></script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="guessnumber/ppkCookieLib.js"></script>
+    <script src="guessnumber/execution.js"></script>
+    <link rel="stylesheet" href="guessnumber.css">
+</head>
+<body>
+    <h1>Guess the number between 1-1000</h1>
+
+    <div id="divTid">
+        <p id="pScore">Remember to press start time, otherwise your score won't count!</p>
+        <button id="startCount" onclick="startCount()">Start tid</button>
+
+    </div>
+    <div>
+        <input id="inputnumber">
+        <button type="button" id="submitnumber" onclick="inputFunc()">Submit</button>
+        <button type ="button" id="reset" onclick="resetFunc()">try again</button>
+    </div>
+    <div>
+        <p id="showresult"></p>
+        <p id="showcount"></p>
+    </div>
+    <p id="showScore"></p>
+
+    <h2>Submit your score</h2>
+    <form name='formal' method='post'>
+        <p>
+            Name: <input type='text' name='name' action='guessnumber.html' required/>
+        </p>
+        <p>
+            Score: <input type='number' name='score' action='guessnumber.html' required/>
+        </p>
+        <p>
+            <input type='submit' value='Go'/>
+        </p>
+    </form>
+
+    <script src="guessnumber/guessnumber.js"></script>
+</body>
+</html>

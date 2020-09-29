@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy</title>
+    <link rel="stylesheet" href="yatzy/yatzy.css">
+</head>
+<body>
+    <h1>Yatzy spil</h1>
+    <div id="rollflex">
+        <button id="roll" onclick="rollDice()">Roll dices</button>
+    </div>
+    <section id="dicesection">
+            <button onclick="toggleHold(event, 0)" id="dice1" data-index="0" class="dice"></button>
+            <button onclick="toggleHold(event, 1)" id="dice2" data-index="1" class="dice"></button>
+            <button onclick="toggleHold(event, 2)" id="dice3" data-index="2" class="dice"></button>
+            <button onclick="toggleHold(event, 3)" id="dice4" data-index="3" class="dice"></button>
+            <button onclick="toggleHold(event, 4)" id="dice5" data-index="4" class="dice"></button>
+    </section>
+    <p id="rules"></p>
+    <button onclick="resetDices()">Reset</button>
+
+    <div id="skema">
+        <table border="3">
+            <tr>
+                <th>
+                    <form class="form">
+                        <div class="formBox">
+                          <label for="person">Navn Spiller 1</label>
+                          <input type="text" id="person" placeholder="Navn" />
+                        </div>
+            <hr>
+                        <div class="formBox">
+                          <label for="1'ere">1'ere</label>
+                          <input type="number" id="1'ere" placeholder="0" />
+                        </div>
+                        <div class="formBox">
+                          <label for="2'ere">2'ere</label>
+                          <input type="number" id="2'ere" placeholder="0" />
+                        </div>
+                        <div class="formBox">
+                          <label for="3'ere">3'ere</label>
+                          <input type="number" id="3'ere" placeholder="0" />
+                        </div>
+                        <div class="formBox">
+                          <label for="4'ere">4'ere</label>
+                          <input type="number" id="4'ere" placeholder="0" />
+                        </div>
+                        <div class="formBox-">
+                          <label for="5'ere">5'ere</label>
+                          <input type="number" id="5'ere" placeholder="0" />
+                        </div>
+                        <div class="formBox">
+                          <label for="6'ere">6'ere</label>
+                          <input type="number" id="6'ere" placeholder="0" />
+                        </div>
+                        <div class="formBox">
+                            <label for="antal">sum</label>
+                            <input type="number" id="antal" placeholder="sum(63)" />
+                          </div>
+                        <div class="formBox">
+                            <label for="bonus">bonus</label>
+                            <input type="number" id="bonus" placeholder="0" />
+                          </div>
+
+                      </th>
+                      </tr>
+
+
+                      <div id="skema">
+                        <table border="3">
+                            <tr>
+                                <th>
+
+
+                            <div class="formBox">
+                              <label for="1 par">1 par</label>
+                              <input type="number" id="1 par" placeholder="0" />
+                            </div>
+                            <div class="formBox">
+                              <label for="2 par">2 par</label>
+                              <input type="number" id="2 par" placeholder="0" />
+                            </div>
+                            <div class="formBox">
+                              <label for="3 ens">3 ens</label>
+                              <input type="number" id="3 ens" placeholder="0" />
+                            </div>
+                            <div class="formBox">
+                              <label for="4 ens">4 ens</label>
+                              <input type="number" id="4 ens" placeholder="0" />
+                            </div>
+                            <div class="formBox">
+                              <label for="Lille straight">Lille straight</label>
+                              <input type="number" id="Lille straight" placeholder="0" />
+                            </div>
+                            <div class="formBox">
+                              <label for="Stor straight-">Stor straight</label>
+                              <input type="number" id="Stor straight" placeholder="0" />
+                            </div>
+                            <div class="formBox">
+                                <label for="Hus">Hus</label>
+                                <input type="number" id="Hus" placeholder="0" />
+                              </div>
+                              <div class="formBox">
+                                <label for="Chancen">Chancen</label>
+                                <input type="number" id="Chancen" placeholder="0" />
+                              </div>
+                              <div class="formBox">
+                                <label for="YATZY">YATZY</label>
+                                <input type="number" id="YATZY" placeholder="0" />
+                              </div>
+                              <div class="formBox">
+                                <label for="Samlet Score">Samlet Score</label>
+                                <input type="number" id="Samlet Score" placeholder="0" />
+                              </div>
+                            <div class="formBox">
+                              <button id="btn">Tilføj score!</button>
+                            </div>
+                            </div>
+                          </form>
+            </th>
+            </tr>
+
+
+            <div id="skema">
+              <table border="3">
+                  <tr>
+                      <th>
+                          <form class="form1">
+                              <div class="form1Box">
+                                <label for="person1">Navn Spiller 2</label>
+                                <input type="text" id="person1" placeholder="Navn" />
+                              </div>
+                  <hr>
+                              <div class="form1Box">
+                                <label for="1'ere1">1'ere</label>
+                                <input type="number" id="1'ere1" placeholder="0" />
+                              </div>
+                              <div class="form1Box">
+                                <label for="2'ere1">2'ere</label>
+                                <input type="number" id="2'ere1" placeholder="0" />
+                              </div>
+                              <div class="form1Box">
+                                <label for="3'ere1">3'ere</label>
+                                <input type="number" id="3'ere1" placeholder="0" />
+                              </div>
+                              <div class="form1Box">
+                                <label for="4'ere1">4'ere</label>
+                                <input type="number" id="4'ere1" placeholder="0" />
+                              </div>
+                              <div class="form1Box">
+                                <label for="5'ere1">5'ere</label>
+                                <input type="number" id="5'ere1" placeholder="0" />
+                              </div>
+                              <div class="form1Box">
+                                <label for="6'ere1">6'ere</label>
+                                <input type="number" id="6'ere1" placeholder="0" />
+                              </div>
+                              <div class="form1Box">
+                                  <label for="antal1">sum</label>
+                                  <input type="number" id="antal1" placeholder="sum(63)" />
+                                </div>
+                              <div class="form1Box">
+                                  <label for="bonus1">bonus</label>
+                                  <input type="number" id="bonus1" placeholder="0" />
+                                </div>
+                              </div>
+
+                           <!-- </form> -->
+                          </th>
+                          </tr>
+
+
+                          <div id="skema">
+                            <table border="3">
+                                <tr>
+                                    <th>
+                                        <!--<form class="form1">-->
+                                  <div class="form1Box">
+                                    <label for="1 par1">1 par</label>
+                                    <input type="number" id="1 par1" placeholder="0" />
+                                  </div>
+                                  <div class="form1Box">
+                                    <label for="2 par1">2 par</label>
+                                    <input type="number" id="2 par1" placeholder="0" />
+                                  </div>
+                                  <div class="form1Box">
+                                    <label for="3 ens1">3 ens</label>
+                                    <input type="number" id="3 ens1" placeholder="0" />
+                                  </div>
+                                  <div class="form1Box">
+                                    <label for="4 ens1">4 ens</label>
+                                    <input type="number" id="4 ens1" placeholder="0" />
+                                  </div>
+                                  <div class="form1Box">
+                                    <label for="Lille straight1">Lille straight</label>
+                                    <input type="number" id="Lille straight1" placeholder="0" />
+                                  </div>
+                                  <div class="form1Box">
+                                    <label for="Stor straight1">Stor straight</label>
+                                    <input type="number" id="Stor straight1" placeholder="0" />
+                                  </div>
+                                  <div class="form1Box">
+                                      <label for="Hus1">Hus</label>
+                                      <input type="number" id="Hus1" placeholder="0" />
+                                    </div>
+                                    <div class="form1Box">
+                                      <label for="Chancen1">Chancen</label>
+                                      <input type="number" id="Chancen1" placeholder="0" />
+                                    </div>
+                                    <div class="form1Box">
+                                      <label for="YATZY1">YATZY</label>
+                                      <input type="number" id="YATZY1" placeholder="0" />
+                                    </div>
+                                    <div class="form1Box">
+                                      <label for="Samlet Score1">Samlet Score</label>
+                                      <input type="number" id="Samlet Score1" placeholder="0" />
+                                    </div>
+                                  <div class="form1Box">
+                                    <button id="btn1">Tilføj Score!</button>
+                                  </div>
+                                </form>
+                              </th>
+                            </tr>
+                </table>
+              </div>
+
+                  <div id="msg">
+                    <pre id="pre"></pre>
+                    <pre id ="pre1"></pre>
+                  </div>
+                  <script src="yatzy/yatzy.js"></script>
+  </body>
+</html>
