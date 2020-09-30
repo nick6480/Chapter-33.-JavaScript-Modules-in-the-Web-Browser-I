@@ -1,15 +1,17 @@
+import {$} from '../lib/library.js';
+
 var dice = new Array(0,0,0,0,0);
 var hold = new Array(false, false, false, false, false);
 var turn = 0;
 
-let rules = document.getElementById("rules");
+let rules = $("rules");
 
 function rollDice() {
     if (this.turn<3){
         for (i = 0; i < 5; i++) {
             if (!hold[i]) {
                 dice[i] = Math.floor(Math.random() * 5) + 1;
-                document.getElementById("dice" + (i+1)).innerHTML = dice[i]
+                $("dice" + (i+1)).innerHTML = dice[i]
             }
         }
         this.turn++;
@@ -23,7 +25,7 @@ function rollDice() {
 function resetBoard() {
     this.rules.innerHTML = "";
     for(let i = 1; i < 6; i++) {
-        let dice = document.getElementById("dice" + i)
+        let dice = $("dice" + i)
         dice.innerHTML = "";
         dice.style.backgroundColor = null;
     }
@@ -52,26 +54,26 @@ const addNavn = (ev) => {
   ev.preventDefault(); //to stop the form submitting
   let navn = {
     //id: Date.now(),
-    person: document.getElementById("person").value,
-    etere: document.getElementById("1'ere").value,
-    toere: document.getElementById("2'ere").value,
-    treere: document.getElementById("3'ere").value,
-    firere: document.getElementById("4'ere").value,
-    femmere: document.getElementById("5'ere").value,
-    seksere: document.getElementById("6'ere").value,
-    antal: document.getElementById("antal").value,
-    bonus: document.getElementById("bonus").value,
+    person: $("person").value,
+    etere: $("1'ere").value,
+    toere: $("2'ere").value,
+    treere: $("3'ere").value,
+    firere: $("4'ere").value,
+    femmere: $("5'ere").value,
+    seksere: $("6'ere").value,
+    antal: $("antal").value,
+    bonus: $("bonus").value,
 
-    "1 par": document.getElementById("1 par").value,
-    "2 par": document.getElementById("2 par").value,
-    "3 ens": document.getElementById("3 ens").value,
-    "4 ens": document.getElementById("4 ens").value,
-    "Lille straight": document.getElementById("Lille straight").value,
-    "Stor straight": document.getElementById("Stor straight").value,
-    Hus: document.getElementById("Hus").value,
-    Chancen: document.getElementById("Chancen").value,
-    YATZY: document.getElementById("YATZY").value,
-    "Samlet Score": document.getElementById("Samlet Score").value,
+    "1 par": $("1 par").value,
+    "2 par": $("2 par").value,
+    "3 ens": $("3 ens").value,
+    "4 ens": $("4 ens").value,
+    "Lille straight": $("Lille straight").value,
+    "Stor straight": $("Stor straight").value,
+    Hus: $("Hus").value,
+    Chancen: $("Chancen").value,
+    YATZY: $("YATZY").value,
+    "Samlet Score": $("Samlet Score").value,
   };
   navne.push(navn);
   document.forms[0].reset(); // sletter input så inputfeldter er klar til næste spil
@@ -86,7 +88,7 @@ const addNavn = (ev) => {
   localStorage.setItem("MyNavnList", JSON.stringify(navne));
 };
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("btn").addEventListener("click", addNavn);
+  $("btn").addEventListener("click", addNavn);
 });
 
 let navne2 = [];
@@ -95,26 +97,26 @@ const addNavn2 = (ev) => {
   ev.preventDefault(); //to stop the form submitting
   let navn2 = {
     //id: Date.now(),
-    person: document.getElementById("person1").value,
-    etere: document.getElementById("1'ere1").value,
-    toere: document.getElementById("2'ere1").value,
-    treere: document.getElementById("3'ere1").value,
-    firere: document.getElementById("4'ere1").value,
-    femmere: document.getElementById("5'ere1").value,
-    seksere: document.getElementById("6'ere1").value,
-    antal: document.getElementById("antal1").value,
-    bonus: document.getElementById("bonus1").value,
+    person: $("person1").value,
+    etere: $("1'ere1").value,
+    toere: $("2'ere1").value,
+    treere: $("3'ere1").value,
+    firere: $("4'ere1").value,
+    femmere: $("5'ere1").value,
+    seksere: $("6'ere1").value,
+    antal: $("antal1").value,
+    bonus: $("bonus1").value,
 
-    "1 par": document.getElementById("1 par1").value,
-    "2 par": document.getElementById("2 par1").value,
-    "3 ens": document.getElementById("3 ens1").value,
-    "4 ens": document.getElementById("4 ens1").value,
-    "Lille straight": document.getElementById("Lille straight1").value,
-    "Stor straight": document.getElementById("Stor straight1").value,
-    Hus: document.getElementById("Hus1").value,
-    Chancen: document.getElementById("Chancen1").value,
-    YATZY: document.getElementById("YATZY1").value,
-    "Samlet Score": document.getElementById("Samlet Score1").value,
+    "1 par": $("1 par1").value,
+    "2 par": $("2 par1").value,
+    "3 ens": $("3 ens1").value,
+    "4 ens": $("4 ens1").value,
+    "Lille straight": $("Lille straight1").value,
+    "Stor straight": $("Stor straight1").value,
+    Hus: $("Hus1").value,
+    Chancen: $("Chancen1").value,
+    YATZY: $("YATZY1").value,
+    "Samlet Score": $("Samlet Score1").value,
   };
   navne2.push(navn2);
   document.forms[0].reset(); // sletter input så inputfeldter er klar til næste spil
@@ -129,5 +131,5 @@ const addNavn2 = (ev) => {
   localStorage.setItem("MyNavn2List", JSON.stringify(navne2));
 };
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("btn1").addEventListener("click", addNavn2);
+  $("btn1").addEventListener("click", addNavn2);
 });
